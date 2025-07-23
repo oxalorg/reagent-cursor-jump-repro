@@ -1,11 +1,5 @@
 ;; shadow-cljs configuration
-{:source-paths
- ["src/dev"
-  "src/main"
-  "src/test"]
-
- :dependencies
- []
+{:deps {:aliases []}
 
  :dev-http
  {8020 "public"}
@@ -17,5 +11,5 @@
    :asset-path "/js"
 
    :modules
-   {:main ; becomes public/js/main.js
+   {:main                               ; becomes public/js/main.js
     {:init-fn starter.browser/init}}}}}

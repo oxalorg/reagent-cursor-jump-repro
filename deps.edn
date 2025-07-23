@@ -1,3 +1,10 @@
 {:paths ["src/dev" "src/main" "src/test"]
- :deps {reagent/reagent {:mvn/version "1.2.0"}
+ :deps {reagent/reagent
+        {#_#_:mvn/version "1.2.0"
+         ;; Gaiwan fork contains a fix for input elements
+         ;; inside a shadow DOM, without this the cursor
+         ;; preservation logic breaks
+         :git/url "https://github.com/GaiwanTeam/reagent"
+         :git/sha "b87e3afe5e71bc5697e866f56488167da0c47d19"
+         #_#_:local/root "../reagent"}
         thheller/shadow-cljs {:mvn/version "2.28.23"}}}
